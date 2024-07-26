@@ -39,7 +39,7 @@ function GoogleLoginComponent() {
       axios.defaults.headers.common["X-CSRFToken"] = csrftoken;
 
       const response = await axios.post(
-        "http://127.0.0.1:8000/api/google-login/",
+        "/api/google-login/",
         { token },
         {
           withCredentials: true, // Ensure credentials (cookies) are included in the request
