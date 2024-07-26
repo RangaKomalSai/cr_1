@@ -334,7 +334,7 @@ const Nav = () => {
         </button>
       </div>
       <div
-        className={`lg:hidden bg-[#561774a3] text-white ${
+        className={`lg:hidden bg-[#571774f4] text-white ${
           navOpen ? "block" : "hidden"
         }`}
         id="navbarSupportedContent"

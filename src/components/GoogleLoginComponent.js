@@ -5,6 +5,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 axios.defaults.baseURL = "http://127.0.0.1:8000";
+// axios.defaults.baseURL = "http://cr.abhyudayiitb.org";
 
 // Function to get CSRF token from cookies
 function getCookie(name) {
@@ -13,7 +14,6 @@ function getCookie(name) {
     const cookies = document.cookie.split(";");
     for (let i = 0; i < cookies.length; i++) {
       const cookie = cookies[i].trim();
-      // Check if the cookie name matches the name we're looking for
       if (cookie.substring(0, name.length + 1) === name + "=") {
         cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
         break;
@@ -25,29 +25,26 @@ function getCookie(name) {
 
 const clientId =
   "949228241511-mbfe9v2nh8u098587qflqstthjfo5oso.apps.googleusercontent.com";
-// const clientId ="949dfhgrthjkyjukhijkml,vhfygyu.googleusercontent.com"
 
 function GoogleLoginComponent() {
-  const navigate = useNavigate();
+  const navigate1 = useNavigate();
+  const navigate2 = useNavigate();
 
   const sendTokenToDjango = async (token) => {
     try {
-      // Fetch CSRF token from cookies
-      const csrftoken = getCookie("csrftoken");
+      // const csrftoken = getCookie("csrftoken");
 
-      // Set CSRF token in headers
-      axios.defaults.headers.common["X-CSRFToken"] = csrftoken;
+      // axios.defaults.headers.common["X-CSRFToken"] = csrftoken;
 
-      const response = await axios.post(
-        "/api/google-login/",
-        { token },
-        {
-          withCredentials: true, // Ensure credentials (cookies) are included in the request
-        }
-      );
-      if (response.data.newCreated) {
-        navigate("/details");
-      } // Assuming backend returns user data or success message
+      const response = await axios.post("/api/google-login/", { token }).then((response) => {if (response.data.newCreated) {
+        localStorage.setItem("isAuthenticated", "true");
+        navigate1("/details");
+      } else if (response.data.isAuthenticated) {
+        localStorage.setItem("isAuthenticated", "true");
+        navigate2("/dashboard");
+      }});
+      console.log(response.data);
+      
     } catch (error) {
       console.error("Error logging in with Google:", error);
     }
@@ -63,11 +60,7 @@ function GoogleLoginComponent() {
 
   return (
     <GoogleOAuthProvider clientId={clientId}>
-      <GoogleLogin
-        onSuccess={handleLoginSuccess}
-        onError={handleLoginError}
-        // useOneTap
-      />
+      <GoogleLogin onSuccess={handleLoginSuccess} onError={handleLoginError} />
     </GoogleOAuthProvider>
   );
 }

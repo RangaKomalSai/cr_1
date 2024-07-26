@@ -88,7 +88,7 @@ function Footer() {
         </span>
         <div className="flex flex-col justify-center items-center">
         <RouteLink to="https://abhyudayiitb.org/" target="_blank">
-        <img src={logo} alt="Abhyuday logo" draggable="false" loading="lazy" className="relative z-[24] w-[300px] lg:w-[600px] mb-4"/></RouteLink>
+        <img src={logo} alt="Abhyuday logo" draggable="false" loading="lazy" className="relative z-[24] w-[300px] lg:w-[600px] mb-4 hoverable"/></RouteLink>
         <h2 className="text-white font-chelsea font-bold text-lg text-pretty text-center lg:text-3xl">Inspiring Individuals, Transforming Communities</h2>
         </div>
         <span className="shape-right">

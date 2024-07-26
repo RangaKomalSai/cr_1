@@ -6,8 +6,8 @@ import boat from "../assets/boat.png";
 import coin from "../assets/coin.png";
 import SectionTitle from "./SectionTitle";
 import noticebard from '../assets/noticebard.jpg';
-import law from '../assets/law.jpg';
-import startup from '../assets/startup.png';
+import zex from '../assets/ZEX.png';
+import know from '../assets/know.jpg';
 import algasem from '../assets/algasem.svg';
 import badda from '../assets/badda.png';
 import tgh from '../assets/tgh.png';
@@ -29,12 +29,12 @@ const Sponsors = () => {
           </span>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16">
-          <div className="profile-card">
+        <div className="profile-card">
             <div className="img-container">
               <img
                 loading="lazy"
                 draggable="false"
-                src={noticebard}
+                src={zex}
                 alt=""
                 data-aos="fade-up"
                 data-aos-duration="800"
@@ -46,19 +46,7 @@ const Sponsors = () => {
               <img
                 loading="lazy"
                 draggable="false"
-                src={law}
-                alt=""
-                data-aos="fade-up"
-                data-aos-duration="800"
-              />
-            </div>
-          </div>
-          <div className="profile-card">
-            <div className="img-container">
-              <img
-                loading="lazy"
-                draggable="false"
-                src={startup}
+                src={her}
                 alt=""
                 data-aos="fade-up"
                 data-aos-duration="800"
@@ -118,7 +106,19 @@ const Sponsors = () => {
               <img
                 loading="lazy"
                 draggable="false"
-                src={her}
+                src={know}
+                alt=""
+                data-aos="fade-up"
+                data-aos-duration="800"
+              />
+            </div>
+          </div>
+          <div className="profile-card">
+            <div className="img-container">
+              <img
+                loading="lazy"
+                draggable="false"
+                src={noticebard}
                 alt=""
                 data-aos="fade-up"
                 data-aos-duration="800"

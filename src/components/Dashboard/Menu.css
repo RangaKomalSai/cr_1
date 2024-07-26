@@ -9,6 +9,9 @@ menu {
   position: sticky;
   top: 0;
 }
+.hoverable{
+  cursor: url('../../assets/blood.svg'), auto;
+}
 
 .mymenu{
   display: flex;

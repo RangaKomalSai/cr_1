@@ -42,11 +42,11 @@ function Hero() {
           <div className="flex flex-col justify-center items-center mx-auto">
             <div className="inline-block">
               <h1
-                className="font-chelsea text-[#F4EDDF] text-[20px] lg:text-[65px] text-center max-w-[85%] mx-auto font-normal text_animation"
+                className="font-chelsea text-[#F4EDDF] text-[20px] lg:text-[65px] text-center max-w-[85%] mx-auto font-normal text_animation text-pretty"
                 data-aos="fade-up"
                 data-aos-duration="1500"
               >
-                COLLEGE REPRESENTATIVE PROGRAM
+                COLLEGE & SCHOOL REPRESENTATIVE PROGRAM
               </h1>
             </div>
             <h2
