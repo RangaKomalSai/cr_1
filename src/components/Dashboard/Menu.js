@@ -10,8 +10,8 @@ function Menu() {
   const navigate = useNavigate(); // Initialize navigate
 
   const handleLogout = () => {
-    console.log('clicked')
     googleLogout(); // Call googleLogout
+    localStorage.removeItem("isAuthenticated");
     navigate('/'); // Redirect to home page after logout
   };
 
