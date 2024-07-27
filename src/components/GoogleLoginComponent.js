@@ -4,8 +4,8 @@ import { GoogleOAuthProvider } from "@react-oauth/google";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-axios.defaults.baseURL = "http://127.0.0.1:8000";
-// axios.defaults.baseURL = "http://cr.abhyudayiitb.org";
+//axios.defaults.baseURL = "http://127.0.0.1:8000";
+axios.defaults.baseURL = "https://cr.abhyudayiitb.org";
 
 // Function to get CSRF token from cookies
 function getCookie(name) {
@@ -27,24 +27,25 @@ const clientId =
   "949228241511-mbfe9v2nh8u098587qflqstthjfo5oso.apps.googleusercontent.com";
 
 function GoogleLoginComponent() {
-  const navigate1 = useNavigate();
-  const navigate2 = useNavigate();
+  const navigate = useNavigate();
 
   const sendTokenToDjango = async (token) => {
     try {
-      // const csrftoken = getCookie("csrftoken");
+      const response = await axios.post("https://cr.abhyudayiitb.org/api/google-login/", { token });
 
-      // axios.defaults.headers.common["X-CSRFToken"] = csrftoken;
-
-      const response = await axios.post("/api/google-login/", { token }).then((response) => {if (response.data.newCreated) {
-        localStorage.setItem("isAuthenticated", "true");
-        navigate1("/details");
-      } else if (response.data.isAuthenticated) {
-        localStorage.setItem("isAuthenticated", "true");
-        navigate2("/dashboard");
-      }});
-      console.log(response.data);
+      if (response && response.data) {
+        const { newCreated, isAuthenticated, redirectUrl } = response.data;
       
+      if (newCreated) {
+        localStorage.setItem("isAuthenticated", "true");
+        window.dispatchEvent(new Event('storage'));
+        navigate(redirectUrl); // Use redirectUrl instead of hardcoding path
+      } else if (isAuthenticated) {
+        localStorage.setItem("isAuthenticated", "true");
+        window.dispatchEvent(new Event('storage'));
+        navigate(redirectUrl); // Use redirectUrl instead of hardcoding path
+      }
+    }
     } catch (error) {
       console.error("Error logging in with Google:", error);
     }
