@@ -1,6 +1,4 @@
 import React from "react";
-import Lottie from "lottie-react";
-import treasure from "../assets/treasure.json";
 import "./WhyUs.css";
 import connection from "../assets/connection.jpg";
 import difference from "../assets/Designer.png";

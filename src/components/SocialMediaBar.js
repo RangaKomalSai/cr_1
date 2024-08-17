@@ -1,11 +1,11 @@
 import React from "react";
-import { ReactComponent as Insta } from '../assets/insta.svg';
-import { ReactComponent as Linkedin } from '../assets/linkedin.svg';
+import { ReactComponent as Insta } from "../assets/insta.svg";
+import { ReactComponent as Linkedin } from "../assets/linkedin.svg";
 
 function SocialMediaBar() {
   return (
     <ul className="sc-icon text-white flex flex-col justify-center items-center">
-        <li>
+      <li>
         <div className="h-16 w-0.5 bg-gray-300"></div>
       </li>
       <li
@@ -13,7 +13,12 @@ function SocialMediaBar() {
         data-animate="fadeInRight"
         data-delay="0.2s"
       >
-        <a href="https://www.instagram.com/iitbombay_abhyuday/" target="_blank" className="hoverable">
+        <a
+          href="https://www.instagram.com/iitbombay_abhyuday/"
+          target="_blank"
+          rel="noreferrer"
+          className="hoverable"
+        >
           <Insta />
         </a>
       </li>
@@ -22,7 +27,11 @@ function SocialMediaBar() {
         data-animate="fadeInRight"
         data-delay="0.2s"
       >
-        <a href="https://youtube.com/@abhyudayiitbombay" target="_blank">
+        <a
+          href="https://youtube.com/@abhyudayiitbombay"
+          target="_blank"
+          rel="noreferrer"
+        >
           <svg
             id="youtube"
             width="22"
@@ -43,7 +52,11 @@ function SocialMediaBar() {
         data-animate="fadeInRight"
         data-delay="0.3s"
       >
-        <a href="https://www.linkedin.com/company/abhyuday-iit-bombay/" target="_blank">
+        <a
+          href="https://www.linkedin.com/company/abhyuday-iit-bombay/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <Linkedin />
         </a>
       </li>
@@ -52,7 +65,11 @@ function SocialMediaBar() {
         data-animate="fadeInRight"
         data-delay="0.3s"
       >
-        <a href="https://www.facebook.com/abhyuday.iitb/" target="_blank">
+        <a
+          href="https://www.facebook.com/abhyuday.iitb/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             x="0px"
@@ -71,7 +88,7 @@ function SocialMediaBar() {
         data-animate="fadeInRight"
         data-delay="0.6s"
       >
-        <a href="https://x.com/Abhyuday_IITB" target="_blank">
+        <a href="https://x.com/Abhyuday_IITB" target="_blank" rel="noreferrer">
           <svg
             className="w-6 h-6 text-gray-800 dark:text-white"
             aria-hidden="true"

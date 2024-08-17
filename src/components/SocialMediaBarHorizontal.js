@@ -13,7 +13,12 @@ function SocialMediaBarHorizontal() {
         data-animate="fadeInRight"
         data-delay="0.2s"
       >
-        <a href="https://www.instagram.com/iitbombay_abhyuday/" target="_blank">
+        <a
+          href="https://www.instagram.com/iitbombay_abhyuday/"
+          target="_blank"
+          rel="noreferrer"
+          className="hoverable"
+        >
           <Insta />
         </a>
       </li>
@@ -22,7 +27,12 @@ function SocialMediaBarHorizontal() {
         data-animate="fadeInRight"
         data-delay="0.2s"
       >
-        <a href="https://youtube.com/@abhyudayiitbombay" target="_blank">
+        <a
+          href="https://youtube.com/@abhyudayiitbombay"
+          target="_blank"
+          rel="noreferrer"
+          className="hoverable"
+        >
           <svg
             id="youtube"
             width="22"
@@ -46,6 +56,8 @@ function SocialMediaBarHorizontal() {
         <a
           href="https://www.linkedin.com/company/abhyuday-iit-bombay/"
           target="_blank"
+          rel="noreferrer"
+          className="hoverable"
         >
           <Linkedin />
         </a>
@@ -55,7 +67,12 @@ function SocialMediaBarHorizontal() {
         data-animate="fadeInRight"
         data-delay="0.6s"
       >
-        <a href="https://www.facebook.com/abhyuday.iitb/" target="_blank">
+        <a
+          href="https://www.facebook.com/abhyuday.iitb/"
+          target="_blank"
+          rel="noreferrer"
+          className="hoverable"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             x="0px"
@@ -74,7 +91,12 @@ function SocialMediaBarHorizontal() {
         data-animate="fadeInRight"
         data-delay="0.6s"
       >
-        <a href="https://x.com/Abhyuday_IITB" target="_blank">
+        <a
+          href="https://x.com/Abhyuday_IITB"
+          target="_blank"
+          rel="noreferrer"
+          className="hoverable"
+        >
           <svg
             className="w-6 h-6 text-gray-800 dark:text-white"
             aria-hidden="true"

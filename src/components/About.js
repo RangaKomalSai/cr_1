@@ -1,5 +1,4 @@
 import React from "react";
-import strip from "../assets/Strip-Top.png";
 import "./About.css";
 import SectionTitle from "./SectionTitle";
 
@@ -20,9 +19,9 @@ function About() {
                 data-aos-duration="1900"
               >
                 Abhyuday , IIT Bombay is a student-led organization that fosters
-               responsibility & leadership in youth, inspiring and
-                empowering young individuals to contribute to society and drive
-                positive change through various initiatives. <br />
+                responsibility & leadership in youth, inspiring and empowering
+                young individuals to contribute to society and drive positive
+                change through various initiatives. <br />
               </p>
               <p
                 className="desc mb-4 lg:max-w-[50%] max-w-[80%] text-start text-[12px] lg:text-[20px] lg:text-pretty font-oswald relative z-[2]"
